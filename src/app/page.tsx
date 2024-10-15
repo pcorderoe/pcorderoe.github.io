@@ -7,7 +7,7 @@ export default function Home() {
         <h1 className="text-3xl">Working On!</h1>
         <p>I am actually working on this site, please stay on to check updates!</p>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center text-center">
         <a
           className="flex items-center gap-2 underline underline-offset-4 "
           href="mailto:pcorderoe@gmail.com;patricio@espejozen.cl"
