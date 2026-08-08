@@ -49,9 +49,46 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
   );
 }
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Patricio Cordero",
+  alternateName: "Patricio Cordero Espejo",
+  jobTitle: "Tech Lead & Full-Stack Engineer",
+  url: "https://pcorderoe.github.io",
+  worksFor: {
+    "@type": "Organization",
+    name: "easycancha",
+    url: "https://easycancha.com",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Concepción",
+    addressCountry: "CL",
+  },
+  email: "mailto:pcorderoe@gmail.com",
+  sameAs: [
+    "https://github.com/pcorderoe",
+    "https://linkedin.com/in/patriciocorderoespejo",
+  ],
+  knowsAbout: [
+    "TypeScript",
+    "Node.js",
+    "React",
+    "React Native",
+    "Expo",
+    "Express",
+    "Next.js",
+  ],
+};
+
 export default function Portfolio() {
   return (
     <main className="mx-auto max-w-2xl px-6 py-20 font-[family-name:var(--font-geist-sans)] sm:py-28">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       {/* Hero */}
       <header>
         <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
